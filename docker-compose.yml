@@ -3,15 +3,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: magiclists
+    container_name: Navidrome-Magic-Lists
     ports:
-      - "4545:8000"
+      - 192.168.3.100:4545:8000
+    network_mode: bridge
     env_file:
       - .env
     environment:
       - DATABASE_PATH=/app/data/magiclists.db
     volumes:
-      - magiclists_data:/app/data
+      - /volume2/docker/navidrome-magic-lists:/app/data
     restart: unless-stopped
 volumes:
   magiclists_data:
