@@ -1,7 +1,7 @@
 services:
   magiclists:
-    build:
-      context: .
+      build: ../../../docker/navidrome-magic-lists
+#      context: .
       dockerfile: Dockerfile
     container_name: Navidrome-Magic-Lists
     ports:
