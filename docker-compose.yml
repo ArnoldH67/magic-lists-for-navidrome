@@ -8,7 +8,7 @@ services:
       - 192.168.3.100:4545:8000
     network_mode: bridge
     env_file:
-      - .env
+      - ../../../env/navidrome-magic-lists.env
     environment:
       - DATABASE_PATH=/app/data/magiclists.db
     volumes:
